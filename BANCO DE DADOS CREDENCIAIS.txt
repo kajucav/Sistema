@@ -1,0 +1,14 @@
+---HOSTNAME----
+
+idly-protective-tuatara.data-1.use1.tembo.io
+
+---PORT--
+
+5432
+
+---USERNAME---
+postgres
+
+---PASSWORD---
+
+qbYNBToxRy2BpoRO
