@@ -13,7 +13,11 @@ venda;
 
 • Pagamentos – informações de todas as vendas realizadas;
 
-## 💻 Técnicas e tecnologias utilizadas
+## 💻 Funcionamento
+
+Foram utilizados as IDEs java para criar a parte do back-end que se utilizou de java swing para desenvolver a parte do GUI do projeto, foi utilizado o banco de dados Postgres [Tembo.io](https://github.com/tembo-io/tembo) de forma online no plano gratuito e após a criação do mesmo foi usado o DBeaver para manipular o banco de dados e criar as tabelas e funções do projeto.
+
+## ⚙ Técnicas e tecnologias utilizadas
 
 - ``Java 8``
 - ``Java Swing``
