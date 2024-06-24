@@ -25,5 +25,5 @@ Você pode acessar os arquivos do projeto clicando [aqui](https://github.com/gui
 
 # Autores
 
-| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/37356058?v=4" width=115><br><sub>Camila Fernanda Alves</sub>](https://github.com/camilafernanda) |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/30351153?v=4" width=115><br><sub>Guilherme Lima</sub>](https://github.com/guilhermeonrails) |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/8989346?v=4" width=115><br><sub>Alex Felipe</sub>](https://github.com/alexfelipe) |
-| :---: | :---: | :---: |
+| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/128549320?v=4" width=115><br><sub>Kauanne Julia</sub>](https://github.com/kajucav) |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/134797061?v=4" width=115><br><sub>João Vitor Jardim</sub>](https://github.com/JoaoPontes05) |  [<img loading="lazy" src="https://avatars.githubusercontent.com/u/126476225?v=4" width=115><br><sub>Gabriel Duarte</sub>](https://github.com/GabrielRainwalker) | [<img loading="lazy" src="https://avatars.githubusercontent.com/u/126476195?v=4" width=115><br><sub>Elter Rodrigues</sub>](https://github.com/rodrigueselter) |
+| :---: | :---: | :---: | :---: |
