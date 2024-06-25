@@ -32,9 +32,9 @@ create table pagamento (
 );
 
 create table usuario (
-                         cod_usu serial primary key,
-                         login varchar(255) not null unique,
-                         senha varchar(255) not null
+        cod_usu serial primary key,
+        login varchar(255) not null unique,
+        senha varchar(255) not null
 );
 
 create table log_erro (
