@@ -31,12 +31,6 @@ create table pagamento (
 	constraint fk_produto foreign key(cod_prod) references produto(cod_prod)
 );
 
-create table usuario (
-                         cod_usu serial primary key,
-                         login varchar(255) not null unique,
-                         senha varchar(255) not null
-);
-
 create table log_erro (
 	cod_erro serial primary key,
 	cln_origem varchar(255),

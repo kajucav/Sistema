@@ -1,4 +1,4 @@
-package swing.app;
+package Java_Swing.src.main.java.swing.app;
 
 import com.formdev.flatlaf.FlatClientProperties;
 import com.formdev.flatlaf.fonts.roboto.FlatRobotoFont;
