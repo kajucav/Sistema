@@ -12,6 +12,7 @@ import raven.swing.blur.style.GradientColor;
 import raven.swing.blur.style.Style;
 import raven.swing.blur.style.StyleBorder;
 import raven.swing.blur.style.StyleOverlay;
+import swing.app.components.Forms.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -28,7 +29,6 @@ public class SystemMenu extends BlurChild {
                         .setBorderColor(new GradientColor(new Color(200,200, 200), new Color(150, 150, 150), new Point2D.Float(0, 0), new Point2D.Float(1f, 0)))
                 )
                 .setOverlay(new StyleOverlay(new Color(0, 0, 0), 0.2f))
-
         );
         init();
     }
@@ -49,8 +49,6 @@ public class SystemMenu extends BlurChild {
                 "width:5;" +
                 "thumbInsets:0,0,0,0");
 
-        // cabeçalho
-
         SimpleHeader header = new SimpleHeader(getHeaderData());
         header.setOpaque(false);
         add(header);
@@ -64,43 +62,34 @@ public class SystemMenu extends BlurChild {
                 .setIcon(new AvatarIcon(getClass().getResource("/swing/images/profile.png"), 60, 60, 999));
     }
 
-    private SimpleMenuOption getMenuOption(){
+    private SimpleMenuOption getMenuOption() {
         raven.drawer.component.menu.data.MenuItem items[] = new raven.drawer.component.menu.data.MenuItem[]{
                 new Item.Label("MAIN"),
-                new Item("Login", "dashboard.svg"),
+                new Item("USUÁRIO", "dashboard.svg"),
                 new Item.Label("CLIENTES"),
-                new Item("Dados dos Clientes", "email.svg")
-                        .subMenu("Nome")
-                        .subMenu("Cpf")
-                        .subMenu("Número de Telefone")
-                        .subMenu("Email")
-                        .subMenu("Cep"),
+                new Item("Dados dos Clientes", "email.svg"),
+                new Item("Modificar Dados", "edit.svg"),
                 new Item.Label("PRODUTOS"),
-                new Item("Dados dos Produtos", "chat.svg")
-                        .subMenu("Nome")
-                        .subMenu("Quantidade no estoque")
-                        .subMenu("Marca")
-                        .subMenu("Preço")
-                        .subMenu("Departamento"),
+                new Item("Dados dos Produtos", "chat.svg"),
                 new Item.Label("PAGAMENTOS"),
-                new Item("Dados dos Pagamentos", "calendar.svg")
-                        .subMenu("Cliente")
-                        .subMenu("Produto")
-                        .subMenu("Método de Pagamento")
-                        .subMenu("Total"),
+                new Item("Dados dos Pagamentos", "calendar.svg"),
+                new Item.Label("ORDEM DE COMPRA"),
+                new Item("Produtos a Comprar", "shop.svg"),
+                new Item.Label("HISTÓRICO"),
+                new Item("Histórico de Modificação", "history.svg")
+                        .subMenu("Tabela Cliente")
+                        .subMenu("Tabela Produto")
+                        .subMenu("Tabela Pagamento"),
                 new Item.Label("CONFIGURAÇÕES"),
                 new Item("Configurações", "ui.svg")
-                        .subMenu("Cor")
-                        .subMenu("Background")
-                        .subMenu("Imagens")
-                        .subMenu("Ajuda"),
+                        .subMenu("Cor"),
                 new Item.Label("SOBRE"),
                 new Item("Sobre", "forms.svg")
                         .subMenu("Autores")
                         .subMenu("SAC")
-                        .subMenu("SAC DBA")
                         .subMenu("Relatar Problema")
         };
+
         return new SimpleMenuOption()
                 .setBaseIconPath("swing/menu")
                 .setIconScale(0.03f)
@@ -119,26 +108,27 @@ public class SystemMenu extends BlurChild {
                 .addMenuEvent(new MenuEvent() {
                     @Override
                     public void selected(MenuAction menuAction, int[] ints) {
-                        System.out.print("Menu Selecionado");
-                        if(ints.length == 1){
+                        System.out.print("Menu select");
+                        if (ints.length == 1) {
                             int index = ints[0];
-                            if(index == 0) {
-                                FormManager.getInstance().showForm("Login Aba", new JLabel("Login", SwingConstants.CENTER));
-                            }
-                        } else if (ints.length == 2) {
-                            int index = ints[0];
-                            int subIndex = ints[1];
-                            if (index == 1) {
-                                if (subIndex == 0) {
-                                    FormManager.getInstance().showForm("Nome Aba", new JLabel("Clientes", SwingConstants.CENTER));
-                                } else if (subIndex == 1) {
-                                    FormManager.getInstance().showForm("CPF Aba", new JLabel("Login", SwingConstants.CENTER));
-                                }
+                            if (index == 3) { // CLIENTES
+                                FormManager.getInstance().showForm("Dados dos Clientes", new ClienteForm());
+                            } else if (index == 5) { // PRODUTOS
+                                FormManager.getInstance().showForm("Dados dos Produtos", new ProdutoForm());
+                            } else if (index == 7) { // PAGAMENTOS
+                                FormManager.getInstance().showForm("Dados dos Pagamentos", new PagamentoForm());
+                            } else if (index == 9) { // ORDEM DE COMPRA
+                                FormManager.getInstance().showForm("Produtos a Comprar", new OrdemForm());
+                            } else if (index == 11) { // HISTÓRICO
+                                FormManager.getInstance().showForm("Histórico de Modificação", new HistoricoForm());
+                            } else if (index == 13) { // CONFIGURAÇÕES
+                                // Código para abrir a forma de configurações
+                            } else if (index == 15) { // SOBRE
+                                FormManager.getInstance().showForm("Sobre", new SobreForm());
                             }
                         }
                     }
-                })
-                ;
+                });
     }
 
     private SimpleMenu simpleMenu;
