@@ -17,6 +17,9 @@ venda;
 
 Foram utilizados as IDEs java para criar a parte do back-end que se utilizou de java swing para desenvolver a parte do GUI do projeto, foi utilizado o banco de dados Postgres [Tembo.io](https://github.com/tembo-io/tembo) de forma online no plano gratuito e após a criação do mesmo foi usado o DBeaver para manipular o banco de dados e criar as tabelas e funções do projeto.
 
+Foi criado uma tela de Login onde as credenciais para autenticar são adicionadas na tabela usuario do BD, qualquer um pode tentar de exemplo seria o meu usuario, com login: duarte e senha: 1234, após a autenticação a guia é fechada e é aberto o App.java de forma 
+automática onde estão os dados da loja virtual. e o front-end
+
 ## ⚙ Técnicas e tecnologias utilizadas
 
 - ``Java 8``
@@ -25,7 +28,7 @@ Foram utilizados as IDEs java para criar a parte do back-end que se utilizou de 
 - ``Tembo.io``
 
 ## 📂 Acesso ao projeto
-Você pode acessar os arquivos do projeto clicando [aqui](https://github.com/gui-lirasilva/Edige-POO/tree/master/src).
+Você pode acessar os arquivos do projeto clicando [aqui]([https://github.com/gui-lirasilva/Edige-POO/tree/master/src](https://github.com/kajucav/Sistema/tree/main/Java_Swing/src/main/java/swing/app/view)).
 
 # Autores
 
